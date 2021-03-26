@@ -1,0 +1,24 @@
+<div class="box">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+        <h2>Login</h2>
+        <div class="inputBox" id="email-box">
+            <input type="text" id="email" value="" formControlName="email" required/>
+            <label>Email</label>
+        </div>
+
+        <div class="inputBox" id="pwd-box">
+            <input type="password" id="pwd" value="" formControlName="pwd" required>
+            <label>Password</label>
+        </div>
+
+        <div class="errorMessage" [@tent]="error ? 'open' : 'closed'">
+            Email o password incorrette
+        </div>
+
+        <div class="pass"><a routerLink="/forgot">Password dimenticata?</a></div>
+        <input type="submit" value="Login">
+        <div class="signup_link">
+            Non sei registrato? <a routerLink="/register">Registrati</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,33 @@
+<div class="box" #thenBlock>
+    <div *ngIf="!outdated; else elseBlock">
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <h2>Resetta la password</h2>
+            <div class="inputBox" id="pwd-box">
+                <input type="password" id="pwd" value="" formControlName="pwd" (ngModelChange)="checkPwd()" required/>
+                <label>Password</label>
+            </div>
+
+            <div class="errorMessage inter" [@bigTent]="pwdError ? 'open' : 'closed'">Password troppo corta: deve essere almeno 8 caratteri</div>
+
+            <div class="inputBox near" id="confirm-box">
+                <input type="password" id="confirm" value="" formControlName="confirm" required>
+                <label>Conferma Password</label>
+            </div>
+
+            <div class="errorMessage" [@tent]="error ? 'open' : 'closed'">
+                Le password non coincidono
+            </div>
+
+            <div class="pass"><a routerLink="/forgot">Password dimenticata?</a></div>
+            <input type="submit" value="Login">
+            <div class="signup_link">
+                Non sei registrato? <a routerLink="/register">Registrati</a>
+            </div>
+        </form>
+    </div>
+    <ng-template #elseBlock>
+        <h2>Resetta la password</h2>
+        <p>Errore: il tuo id è scaduto.</p>
+        <div class="back"><a routerLink="/login">Torna al login</a></div>
+    </ng-template>
+</div>

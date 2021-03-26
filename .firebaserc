@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "movenet-d8bb4": {
+      "hosting": {
+        "Movenet": [
+          "movenet-d8bb4"
+        ]
+      }
+    }
+  }
+}

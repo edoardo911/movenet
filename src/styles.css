@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	background: url(./assets/images/back.jpg);
+	background-repeat: repeat-y;
+	background-size: cover;
+	height: 100vh;
+	color: #fff;
+	overflow: hidden;
+}
+
+.box
+{
+	position: absolute;
+	top: 50vh;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+	max-height: 85%;
+	padding: 40px;
+	background: rgba(0,0,0,0.7);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,0.8);
+	border-radius: 10px;
+	overflow-y: auto;
+}
+
+.box h2
+{
+	margin: 0 0 30px;
+	padding: 0;
+	color: #429E87;
+	text-align: center;
+}
+
+.box form{
+	padding: 0 40px;
+	box-sizing: border-box;
+}
+
+.box .inputBox
+{
+	position: relative;
+	border-bottom: 2px solid #adadad;
+	margin: 50px 0;
+	transition: 0.3s;
+}
+
+.box .inputBox input
+{
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	letter-spacing: 1px;
+	border: none;
+	border-bottom: 1px solid silver;
+	background: transparent;
+	outline: none;
+	transition: border-color 0.3s;
+}
+
+.box .inputBox.error,
+.box .inputBox.error > input
+{
+	border-color: #FF0000;
+}
+
+.box .inputBox label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label
+{
+	top: -20px;
+	left: 0;
+	color: #429E87;
+	font-size: 12px;
+	transition: .5s;
+}
+
+input[type="submit"]
+{
+	width: 100%;
+	height: 50px;
+	border: 1px solid #429E87;
+	background-color: #429E87;
+	border-radius: 25px;
+	font-size: 18px;
+	color: #fff;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+}
+
+input[type="submit"]:hover
+{
+	border-color: #429E87;
+	transition: .5s;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pass
+{	
+	margin: -5px 0 20px 5px;
+	text-align: center;
+}
+
+.pass a
+{
+	color: #a6a6a6;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.pass a:hover{
+	text-decoration: underline;
+}
+
+.signup_link
+{
+	margin: 30px 0;
+	text-align: center;
+	font-size: 16px;
+	color: #a6a6a6;
+}
+
+.signup_link a
+{
+	color: #429E87;
+	text-decoration: none;
+}
+
+.signup_link a:hover
+{
+	text-decoration: underline;
+}
+
+.back
+{	
+	margin: -5px 0 20px 5px;
+	text-align: center;
+}
+
+
+.back a
+{
+	color: #a6a6a6;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.back a:hover{
+	text-decoration: underline;
+}
+
+.indietro_link
+{
+	margin: 30px 0;
+	text-align: center;
+	font-size: 16px;
+}
+
+.indietro_link a
+{
+	text-decoration: none;
+	color: #a6a6a6;
+}
+
+.indietro_link a:hover
+{
+	text-decoration: underline;
+	color: #429E87;
+}
+
+div.errorMessage
+{
+	color: #FF0000;
+	font-size: 20px;
+	text-align: center;
+	margin-top: -18px;
+	margin-bottom: 26px;
+	transform-origin: top left;
+}
+
+p
+{
+	text-align: center;
+	font-size: 18px;
+}

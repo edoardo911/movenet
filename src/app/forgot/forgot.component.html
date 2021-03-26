@@ -1,0 +1,19 @@
+<div class="box">
+    <h2>Recupera password</h2>
+
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+        <div class="inputBox" id="email-box">
+            <input type="text" id="email" value="" formControlName="email" required>
+            <label>Email</label>
+        </div>
+
+        <div class="errorMessage" [@tent]="error ? 'open' : 'closed'">{{ errorMessage }}</div>
+
+        <input type="submit" value="Invia">
+        <div class="signup_link">
+            Non sei registrato? <a routerLink="/register">Registrati</a> 
+        </div>
+
+        <div class="back"><a routerLink="/login">Torna al login</a></div>
+    </form>
+</div>

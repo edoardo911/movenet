@@ -1,0 +1,40 @@
+<div class="box">
+    <h2>Registrati</h2>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <div class="inputBox" id="username-box">
+          <input type="text" id="username" value="" formControlName="username" required>
+          <label>Username</label>
+      </div>
+      
+      <div class="inputBox" id="email-box">
+        <input type="text" id="email" value="" formControlName="email" required>
+        <label>Email</label>
+      </div>
+
+      <div class="inputBox" id="number-box">
+        <input type="number" id="number" value="" formControlName="number" (ngModelChange)="checkNumber()" autocomplete="off" required>
+        <label>Numero di telefono</label>
+      </div>
+
+      <div class="errorMessage inter" [@smallTent]="numberError ? 'open' : 'closed'">Numero non è valido</div>
+
+      <div class="inputBox near" id="pwd-box">
+        <input type="password" id="pwd" value="" formControlName="pwd" (ngModelChange)="checkPwd()" required>
+        <label>Password</label>
+      </div>
+
+      <div class="errorMessage inter" [@bigTent]="pwdError ? 'open' : 'closed'">Password troppo corta: deve essere almeno 8 caratteri</div>
+
+      <div class="inputBox near" id="confirm-box">
+        <input type="password" id="confirm" value="" formControlName="confirm" required>
+        <label>Conferma password</label>
+      </div>
+
+      <div class="errorMessage" [@tent]="error ? 'open' : 'closed'">{{ errorMessage }}</div>
+
+      <input type="submit" value="Registrati">
+      <div class="indietro_link">
+          <a routerLink="/login">Torna al login</a>
+      </div>
+    </form>
+</div>
