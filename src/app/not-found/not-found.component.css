@@ -1,0 +1,41 @@
+.errorBox
+{
+    position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow: column;
+}
+
+h1 { font-size: 160px; }
+
+p
+{
+    font-size: 30px !important;
+    text-align: center !important;
+}
+
+a
+{
+    text-decoration: none;
+    width: 100% !important;
+	height: 50px !important;
+    padding: 10px 85px 10px 85px;
+    margin-top: 15px !important;
+	border: 1px solid #fff!important;
+	background-color: transparent!important;
+	border-radius: 25px!important;
+	font-size: 20px!important;
+    color: #fff!important;
+	cursor: pointer!important;
+	outline: none;
+}
+
+a:hover
+{
+	border-color: #429E87!important;
+    color: #429E87!important;
+    background-color: #fff!important;
+	transition: .5s !important;
+}

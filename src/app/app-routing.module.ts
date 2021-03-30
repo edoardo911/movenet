@@ -10,7 +10,7 @@ import { NgModule } from '@angular/core';
 import { RecoverComponent } from './recover/recover.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/area', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent },
   { path: 'recover', component: RecoverComponent },
   { path: 'confirm', component: ConfirmComponent },

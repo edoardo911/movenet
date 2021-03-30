@@ -101,12 +101,13 @@ export class RecoverComponent implements OnInit
                     {
                         this.db.list("/users").set(u.key, {
                             email: user['email'],
-                            number: user['number'],
+                            number: `${user['number']}`,
                             pwd: sub_pwd,
                             username: user['username']
                         });
-                        this.cs.set("email-reset-id", "");
-                        this.cs.set("recover-email", "");
+                        this.cs.delete("email-reset-id", "/");
+                        this.cs.delete("recover-email", "/");
+                        this.cs.delete("username", "/");
                         this.router.navigateByUrl("/login");
                         return;
                     }
