@@ -4,10 +4,10 @@ import { LoginComponent } from 'src/app/login/login.component';
 import { ConfirmComponent } from './confirm/confirm.component';
 import { ForgotComponent } from './forgot/forgot.component';
 
+import { RecoverComponent } from './recover/recover.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AreaComponent } from './area/area.component';
 import { NgModule } from '@angular/core';
-import { RecoverComponent } from './recover/recover.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/area', pathMatch: 'full' },
